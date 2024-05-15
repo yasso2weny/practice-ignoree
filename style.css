@@ -1,0 +1,411 @@
+/*  (-CSS reset- Credit: Josh Comeau ) */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*  CSS Reset End */
+
+/*--------Google Fonts--------*/
+
+@font-face {
+    font-family: "Fraunces";
+    font-weight: 700;
+    src: url("assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-weight: 700;
+    src: url("assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("ttf");
+}
+
+/*--------Root--------*/
+
+:root {
+    --primaryClr: #24053E;
+    --secondaryClr: #44FFA1;
+    --txtPrimary: #584D62;
+    --txtSecondary: #FCF8FF;
+    --txtTeritary: #FFFFFF;
+
+    --ff-base: "Fraunces", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/*--------Body--------*/
+
+body {
+    /* background-color: var(--primaryClr); */
+    margin: 0;
+    font-family: var(--ff-base);
+}
+
+/*--------Header Section--------*/
+
+.header-section {
+    background-color: var(--primaryClr);
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    padding-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+    padding-top: 30px;
+    width: 100dvw;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: var(--secondaryClr);
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    color: white;
+    transition: color 0.4s ease;
+}
+
+a:hover {
+    color: var(--secondaryClr);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 635px;
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: var(--fw-regular);
+    margin-block: 37px;
+}
+
+span {
+    text-decoration: underline;
+    text-decoration-color: var(--secondaryClr);
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+}
+
+.btn {
+    background-color: var(--secondaryClr);
+    border: none;
+    width: 161px;
+    height: 61px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondaryClr);
+    color: var(--secondaryClr);
+}
+
+#phone-img {
+    width: 767px;
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    z-index: 11;
+}
+
+/*--------Perks Section--------*/
+
+.perks-section {
+    display: flex;
+    gap: 30px;
+    margin-block: 300px;
+    padding-inline: 100px;
+}
+
+.perks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.num {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 9px 17px;
+    font-size: 18px;
+}
+
+.perks-title {
+    font-size: 32px;
+}
+
+.perks-body {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+/*--------Access Section--------*/
+
+#founder-img {
+    width: 477px;
+    position: absolute;
+    left: 150px;
+    bottom: -1000px;
+}
+
+.access-section {
+    position: absolute;
+    right: 200px;
+    width: 730px;
+    background-color: var(--primaryClr);
+    padding: 50px;
+}
+
+.access-title {
+    font-size: 56px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.access-body {
+    font-size: 18px;
+    line-height: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/*--------Footer Section--------*/
+
+.footer-container {
+    margin-top: 800px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icons-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    img {
+        display: none;
+    }
+
+    /*--------Header Section--------*/
+
+    .header-section {
+        background-color: var(--primaryClr);
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 5px;
+        padding-top: 30px;
+        width: 100dvw;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: var(--fw-regular);
+        margin-block: 37px;
+    }
+
+    span {
+        text-decoration: underline;
+        text-decoration-color: var(--secondaryClr);
+        text-underline-offset: 8px;
+        text-decoration-thickness: 3px;
+    }
+
+    .btn {
+        background-color: var(--secondaryClr);
+        border: none;
+        width: 161px;
+        height: 61px;
+        transition: 0.4s ease;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: transparent;
+        border: 1px solid var(--secondaryClr);
+        color: var(--secondaryClr);
+    }
+
+    #phone-img {
+        width: 767px;
+        position: absolute;
+        top: 400px;
+        left: 400px;
+        z-index: 11;
+    }
+
+    /*--------Perks Section--------*/
+
+    .perks-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-block: 10px;
+        padding-inline: 10px;
+    }
+
+    .perks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .num {
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 9px 17px;
+        font-size: 18px;
+    }
+
+    .perks-title {
+        font-size: 32px;
+    }
+
+    .perks-body {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    /*--------Access Section--------*/
+
+    #founder-img {
+        width: 375px;
+        position: relative;
+    }
+
+    .access-section {
+        position: relative;
+        width: 375px;
+        background-color: var(--primaryClr);
+        padding: 50px;
+    }
+
+    .access-title {
+        font-size: 56px;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .access-body {
+        font-size: 18px;
+        line-height: 32px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    /*--------Footer Section--------*/
+
+    .footer-container {
+        margin-top: 800px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .social-icons-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+}
